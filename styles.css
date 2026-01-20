@@ -354,6 +354,244 @@ section {
 }
 
 /* ============================================
+   SKILLS SECTION
+   ============================================ */
+
+.skills {
+    background: linear-gradient(135deg, rgba(21, 27, 61, 0.5) 0%, rgba(10, 14, 39, 0.5) 100%);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.08) 0%, rgba(0, 217, 255, 0.08) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.skill-category:hover {
+    border-color: var(--neon-green);
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.15) 0%, rgba(0, 217, 255, 0.1) 100%);
+    box-shadow: 0 15px 40px rgba(0, 255, 136, 0.2);
+    transform: translateY(-8px);
+}
+
+.skill-category-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--neon-green);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background: rgba(0, 255, 136, 0.15);
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: var(--neon-green);
+    color: var(--primary-bg);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+    transform: scale(1.1);
+}
+
+/* ============================================
+   PROJECTS SECTION
+   ============================================ */
+
+.projects {
+    background: linear-gradient(135deg, #0a0e27 0%, #151b3d 100%);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: linear-gradient(135deg, rgba(217, 70, 239, 0.08) 0%, rgba(0, 217, 255, 0.08) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: var(--neon-purple);
+    background: linear-gradient(135deg, rgba(217, 70, 239, 0.15) 0%, rgba(0, 217, 255, 0.1) 100%);
+    box-shadow: 0 20px 50px rgba(217, 70, 239, 0.3);
+    transform: translateY(-15px);
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.project-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.project-tag {
+    background: rgba(217, 70, 239, 0.2);
+    color: var(--neon-purple);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.project-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.tech-badge {
+    background: rgba(0, 217, 255, 0.15);
+    border: 1px solid var(--neon-blue);
+    color: var(--neon-blue);
+    padding: 0.4rem 0.9rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.tech-badge:hover {
+    background: var(--neon-blue);
+    color: var(--primary-bg);
+    box-shadow: 0 5px 15px rgba(0, 217, 255, 0.3);
+}
+
+/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+
+.testimonials {
+    background: linear-gradient(135deg, rgba(21, 27, 61, 0.5) 0%, rgba(10, 14, 39, 0.5) 100%);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, rgba(0, 217, 255, 0.05) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.testimonial-card:hover {
+    border-color: var(--neon-green);
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.12) 0%, rgba(0, 217, 255, 0.08) 100%);
+    box-shadow: 0 15px 40px rgba(0, 255, 136, 0.2);
+    transform: translateY(-10px);
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    font-size: 1.2rem;
+    color: #ffd700;
+    letter-spacing: 2px;
+}
+
+.testimonial-role {
+    background: rgba(0, 255, 136, 0.2);
+    color: var(--neon-green);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.testimonial-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--neon-green);
+    font-size: 0.9rem;
+}
+
+/* ============================================
    ACHIEVEMENTS SECTION
    ============================================ */
 
@@ -688,6 +926,37 @@ section {
 }
 
 /* ============================================
+   RIPPLE EFFECT
+   ============================================ */
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    animation: rippleEffect 0.6s ease-out;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ============================================
+   ACTIVE NAV LINK STYLE
+   ============================================ */
+
+.nav-link.active {
+    color: var(--neon-green);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 
@@ -712,22 +981,48 @@ section {
 
     .services-grid,
     .achievements-grid,
-    .courses-grid {
+    .courses-grid,
+    .skills-grid,
+    .projects-grid,
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
     .nav-menu {
         display: none;
     }
+
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .testimonial-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 480px) {
     section {
-        padding: 3rem 1rem;
+        padding: 2.5rem 1rem;
     }
 
     .hero-title {
         font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
     }
 
     .cta-button {
@@ -737,5 +1032,38 @@ section {
 
     .contact-link {
         font-size: 1.3rem;
+    }
+
+    .profile-pic {
+        width: 160px;
+        height: 160px;
+        border-radius: 12px;
+    }
+
+    .company-logo {
+        max-width: 150px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title::after {
+        width: 60px;
+    }
+
+    .skill-category,
+    .project-card,
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .skills-list {
+        gap: 0.7rem;
+    }
+
+    .skill-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
     }
 }
