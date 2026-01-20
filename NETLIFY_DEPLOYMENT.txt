@@ -1,0 +1,95 @@
+## 🚀 NETLIFY DEPLOYMENT - STEP BY STEP
+
+Your portfolio is ready to deploy! Follow these exact steps:
+
+### STEP 1: Go to Netlify
+1. Open your browser and go to: **https://app.netlify.com**
+2. You should see the Netlify dashboard
+
+### STEP 2: Create New Site from Git
+1. Click the **"New site from Git"** button (or **"Add new site"**)
+2. Choose **GitHub** as your Git provider
+3. Click **"Authorize"** and log in with your GitHub account
+4. Grant Netlify permission to access your repositories
+
+### STEP 3: Select Your Repository
+1. Search for or select: **RAJKUMAR-PROFILE**
+2. Click on it to select
+
+### STEP 4: Configure Build Settings
+The build settings should show:
+- **Branch to deploy:** `main` ✓
+- **Build command:** (leave empty)
+- **Publish directory:** `.` (already configured in netlify.toml)
+
+Everything is pre-configured! Just click **"Deploy site"**
+
+### STEP 5: Wait for Deployment
+- Netlify will build and deploy your site (takes 1-2 minutes)
+- You'll see a unique URL like: `https://xxx-xxxxxx.netlify.app`
+- Share this link - your portfolio is now LIVE! 🎉
+
+### STEP 6 (Optional): Custom Domain
+1. Go to **Site Settings** → **Domain Management**
+2. Click **"Add custom domain"**
+3. Enter your domain (e.g., rajkumar.dev)
+4. Follow DNS instructions
+
+---
+
+## 🔍 VERIFY YOUR DEPLOYMENT
+
+Once deployed, check these sections on your live site:
+
+✓ Home page loads with profile picture
+✓ Navigation menu works (click each link)
+✓ Hero section has animated glow circles
+✓ Skills section displays tech tags
+✓ Projects section shows work experience
+✓ Contact section has email link
+✓ All images visible
+✓ Responsive on mobile (test with F12)
+
+---
+
+## 🐛 IF SOMETHING ISN'T WORKING
+
+### Issue: Site shows blank/error
+**Solution:** 
+1. Go to Netlify site → **Deploys**
+2. Check deploy logs for errors
+3. Ensure all files are committed to GitHub
+
+### Issue: Images not showing
+**Solution:**
+1. Image filenames are case-sensitive
+2. Check: `raj 3.jpg` and `Titanobova private limited.png` exist
+3. Clear cache with Ctrl+Shift+R
+
+### Issue: Styles not applied
+**Solution:**
+1. Hard refresh: Ctrl+Shift+R
+2. Check `styles.css` is loading (F12 → Network tab)
+3. Verify CSS file is committed to GitHub
+
+### Issue: Navigation not working
+**Solution:**
+1. Check JavaScript console (F12 → Console)
+2. Verify `script.js` is loaded
+3. Test with different browser
+
+---
+
+## 📞 SUPPORT
+
+If deployment fails:
+1. Check GitHub has latest code: `git push origin main`
+2. Check netlify.toml exists in repository
+3. Try manual push to re-trigger deploy
+4. Check Netlify build logs for specific errors
+
+**Your repository:** https://github.com/Rajkumarceo/RAJKUMAR-PROFILE
+
+---
+
+Ready to deploy? Go to **https://app.netlify.com** now! 🚀
